@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}Новости{% endblock %}
+{% block header %}Новости{% endblock %}
+{% block content %}
+    <ul style="list-style: none; list-style-position: inside; display: grid;  gap: 30px;
+                grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); ">
+        {% for article in articles %}
+            {{article.raw_html_preview|safe}}
+        {% endfor %}
+    </ul>
+    {{ pagination.info }}
+    <div style="margin: 20px; display: flex; justify-content: center;">{{ pagination.links }}</div>
+{% endblock %}
+

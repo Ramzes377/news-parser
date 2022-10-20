@@ -1,0 +1,197 @@
+
+body {
+    background: #fff;
+}
+
+aside   {
+    float: left;
+    background: #4033b5;
+    width: 9%;
+    padding: 2%;
+    height: 100vh;
+    color: #fff;
+    border-right: 15px solid #5d5d5d;
+}
+
+aside img {
+    width: 60px;
+    float: left;
+}
+
+aside .logo {
+    font-size: 60px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+}
+
+aside ul li {
+    color: #fff;
+    display: block;
+    margin: 20px;
+    transition: transform .6s ease;
+    text-decoration-thickness: 50%;
+    text-decoration-color: rgba(255, 128, 128, 0.5);
+    font-size:17px;
+    padding:8px 12px;
+    border-radius:3px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+}
+
+aside ul li:hover, aside ul a:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+main .features{
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    width: calc(100% - 5em);
+}
+
+html, body, .scrollableContentAncestor {
+  height: 100%; /* Enable the scrollable content `height: 100%` to be interpreted correctly. */
+}
+
+.scrollableContentParent {
+  overflow: hidden;       /* Disable scrolling on the fixed header */
+  display: flex;          /* Avoid `overflow: hidden` from interfering with ability to scroll the full length of the scrollable content. */
+  flex-direction: column; /* As above. */
+}
+
+.scrollableContentBelowFixedHeader {
+  height: 100%;     /* All the height that is _not_ taken by the other blocks (i.e. the fixed header). This is the part that enables dynamic height header. */
+  overflow-y: auto; /* For all the content that does not fit in the part of the block that is visible within the viewpart, make it vertically scrollable. */
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #000;
+}
+a: card-big _parts-text _article{
+    width: 300px;
+}
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 400"><path d="M64.8729476928711,184.75335693359375C77.18236446380615,173.04932289123536,94.76084003448486,131.72645721435546,119.58146667480469,132.7354278564453C144.40209331512452,133.74439849853516,146.5321346282959,190.04484672546386,175.1868438720703,189.2376708984375C203.84155311584473,188.43049507141114,215.05232429504395,129.55156936645508,246.93572998046875,129.14797973632812C278.81913566589355,128.74439010620117,285.00746002197263,188.25111331939698,316.890869140625,187.44393920898438C348.77427825927737,186.63676509857177,360.59043884277344,124.95515480041504,388.6397705078125,125.56053924560547C416.68910217285156,126.16592369079589,415.52317504882814,188.72198162078857,441.5545654296875,190.13453674316406C467.58595581054686,191.54709186553956,490.20927734375,144.95515632629395,504.3348388671875,131.83856201171875" fill="none" stroke-width="7" stroke="url(&quot;#SvgjsLinearGradient1000&quot;)" stroke-linecap="round" stroke-dasharray="125 0"></path><defs><linearGradient id="SvgjsLinearGradient1000"><stop stop-color="hsl(37, 99%, 67%)" offset="0"></stop><stop stop-color="hsl(316, 73%, 52%)" offset="1"></stop></linearGradient></defs></svg>
+
+.scrollableContentAncestor {
+height: 100%; /* Enable the scrollable content `height: 100%` to be interpreted correctly. */
+}
+
+.scrollableContentParent {
+  overflow: hidden;       /* Disable scrolling on the fixed header */
+  display: flex;          /* Avoid `overflow: hidden` from interfering with ability to scroll the full length of the scrollable content. */
+  flex-direction: column; /* As above. */
+}
+
+.scrollableContentBelowFixedHeader {
+  height: 100%;     /* All the height that is _not_ taken by the other blocks (i.e. the fixed header). This is the part that enables dynamic height header. */
+  overflow-y: auto; /* For all the content that does not fit in the part of the block that is visible within the viewpart, make it vertically scrollable. */
+  width: 85%;
+
+}
+a:link, a:visited,  a:hover, a:active
+{
+    color: #000;
+    text-decoration: none;
+}
+
+li.parts-page__item
+{
+    width: 280px;
+    overflow-wrap: anywhere;
+    padding:15px;
+    border-radius: 5px;
+}
+
+h3.card-big__title
+{
+    text-align: center;
+}
+
+span.card-big__rightcol {
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+time.card-big__date
+{
+    text-align: right;
+}
+
+.list-pages {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+.list-pages ul li {
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 35px;
+	padding: 16px 0 0 0;
+	border: 1px solid #d0d0d0;
+	border-radius: 7px;
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0;
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 30px;
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none;
+}
+.center {
+text-align: center;
+width: 50%;
+padding: 10px;
+margin: 20px 0 30px 25%;
+}
+.box-note {
+    font: italic 1.2em "Fira Sans", serif;
+    font-family: cursive;
+}
+p.topic-body__content-text{
+    font: 1.2em "Bold", serif;
+    font-style: normal;
+    overflow-wrap: anywhere;
+}
+h1 {
+    padding: 2%;
+}
+h2 {
+    font: bold "Story Element", serif;
+    padding: 30px 0px 30px 30px;
+}
+
+img.card-big__image
+{
+    border-radius: 3px 3px 0px 0px;
+}
+li.parts-page__item
+{
+    width: 320px;
+    background-color: #faf5f0;
+    box-shadow: 3px 3px 1px #d0d0d0;
+}
+a.card-big _parts-text _article
+{
+    border-radius: 3px;
+}
