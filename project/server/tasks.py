@@ -37,7 +37,6 @@ def load_article_content(slug: str) -> dict:
         if not article.is_loaded:
             try:
                 article.raw_html_content, query = parse_content(article.raw_html_content_url)
-                print(query)
                 load_static.subtask().delay(query)
                 article.is_loaded = True
                 db.session.add(article)
