@@ -2,28 +2,8 @@ version: '3.8'
 
 services:
 
-  flask:
-    build: .
-    container_name: flask
-    ports:
-      - '5000:5000'
-    command: python app.py run -h 0.0.0.0
-    volumes:
-      - .:/usr/src/app
-    environment:
-      - FLASK_DEBUG=1
-      - FLASK_APP=manage:cli
-      - SERVER_NAME=127.0.0.1:5000
-      - APP_SETTINGS=project.server.config.DevelopmentConfig
-      - CELERY_BROKER_URL=redis://redis:6379/0
-      - CELERY_RESULT_BACKEND=redis://redis:6379/0
-      - SQLALCHEMY_DATABASE_URI=postgresql://postgres:admin@host.docker.internal:5432/news-parser
-    depends_on:
-      - postgres
-      - redis
-
   postgres:
-    container_name: postgres_container
+    container_name: postgres
     image: postgres:15.0
     restart: always
     environment:
@@ -51,10 +31,30 @@ services:
       - CELERY_BROKER_URL=redis://redis:6379/0
       - CELERY_RESULT_BACKEND=redis://redis:6379/0
     depends_on:
-      - flask
       - redis
 
   redis:
     image: redis:7.0.5
+
+  flask:
+    build: .
+    container_name: flask
+    ports:
+      - '5000:5000'
+    command: python app.py run -h 0.0.0.0
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_APP=manage:cli
+      - SERVER_NAME=127.0.0.1:5000
+      - APP_SETTINGS=project.server.config.DevelopmentConfig
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - CELERY_RESULT_BACKEND=redis://redis:6379/0
+      - SQLALCHEMY_DATABASE_URI=postgresql://postgres:admin@host.docker.internal:5432/news-parser
+    depends_on:
+      - postgres
+      - redis
+      - celery
     
   
